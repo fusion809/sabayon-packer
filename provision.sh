@@ -15,7 +15,8 @@ for script in \
   fstab       \
   grub        \
   vagrant     \
-  cleanup
+  cleanup     \
+  other
 do
   "$SCRIPTS/scripts/$script.sh"
 done

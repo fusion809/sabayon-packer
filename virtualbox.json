@@ -24,6 +24,31 @@
 	"<wait10>",
 	"<wait10>",
 	"<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
+  "<wait10>",
 	"<wait>",
 	"sed -i -e 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config",
 	"<enter>",
@@ -33,15 +58,18 @@
 	"<enter>",
         "systemctl start sshd",
         "<enter>",
-        "<wait10>"
+        "<wait10>",
+        "<wait10>",
+      "<wait10>"
       ],
       "boot_wait": "5s",
-      "disk_size": 60000,
+      "disk_size": 131072,
       "guest_additions_mode": "disable",
       "guest_os_type": "Gentoo_64",
       "headless": true,
-      "iso_url": "http://na.mirror.garr.it/mirrors/sabayonlinux/iso/{{user `build_type`}}/Sabayon_Linux_{{user `build`}}_{{user `arch`}}_{{user `flavor`}}.iso",
-      "iso_checksum_type": "none",
+      "iso_url": "http://mirror.optusnet.com.au/sabayon/iso/{{user `build_type`}}/Sabayon_Linux_{{user `build`}}_{{user `arch`}}_{{user `flavour`}}.iso",
+      "iso_checksum_type": "md5",
+      "iso_checksum": "5b9ec2adeeff90273d89574b43ff0577",
       "shutdown_command": "shutdown -hP now",
       "ssh_password": "{{user `root_password`}}",
       "ssh_username": "{{user `root_username`}}",
@@ -54,7 +82,7 @@
   "post-processors": [
 	  {
 		    "type": "compress",
-		    "output": "Sabayon_Linux_{{user `build`}}_{{user `arch`}}_{{user `flavor`}}-ovf.tar.gz"
+		    "output": "Sabayon_Linux_{{user `build`}}_{{user `arch`}}_{{user `flavour`}}-ovf.tar.gz"
 	  }
   ],
   "provisioners": [
@@ -80,7 +108,6 @@
     "build": "DAILY",
     "build_type": "daily",
     "arch": "amd64",
-    "flavor": "SpinBase"
+    "flavour": "SpinBase"
   }
 }
-
