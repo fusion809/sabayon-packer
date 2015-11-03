@@ -1,8 +1,8 @@
 # Get the dependencies
 chroot /mnt/sabayon /bin/bash <<'EOF'
-equo i =dev-libs/efl-1.15.2 net-misc/wget dev-vcs/subversion sys-devel/base-gcc sys-devel/gcc virtual/libstdc++
+equo i =dev-libs/efl-1.15.2 net-misc/wget dev-vcs/subversion sys-devel/base-gcc sys-devel/gcc virtual/libstdc++ =media-plugins/evas_generic_loaders-1.15.0
 equo i -o x11-wm/enlightenment:0.17
-emerge =dev-libs/e_dbus-1.7.10 =media-plugins/evas_generic_loaders-1.15.0
+emerge =dev-libs/e_dbus-1.7.10
 # Get the source code
 wget -c https://github.com/JeffHoogland/moksha/archive/0.1.0.tar.gz | tar -xz
 # Change into the source code directory
