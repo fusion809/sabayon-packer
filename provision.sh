@@ -16,7 +16,7 @@ for script in \
   grub        \
   vagrant     \
   cleanup     \
-  other
+  moksha
 do
   "$SCRIPTS/scripts/$script.sh"
 done

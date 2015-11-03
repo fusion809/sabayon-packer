@@ -69,7 +69,7 @@
       "headless": true,
       "iso_url": "http://mirror.optusnet.com.au/sabayon/iso/{{user `build_type`}}/Sabayon_Linux_{{user `build`}}_{{user `arch`}}_{{user `flavour`}}.iso",
       "iso_checksum_type": "md5",
-      "iso_checksum": "5b9ec2adeeff90273d89574b43ff0577",
+      "iso_checksum": "1770140e7a7f3d0d0ef3e4cb0909a9c4",
       "shutdown_command": "shutdown -hP now",
       "ssh_password": "{{user `root_password`}}",
       "ssh_username": "{{user `root_username`}}",
@@ -105,8 +105,8 @@
     "atlas_token" : "{{env `ATLAS_TOKEN`}}",
     "root_username": "root",
     "root_password": "root",
-    "build": "DAILY",
-    "build_type": "daily",
+    "build": "15.11",
+    "build_type": "monthly",
     "arch": "amd64",
     "flavour": "SpinBase"
   }

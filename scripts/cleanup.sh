@@ -2,7 +2,7 @@
 
 chroot /mnt/sabayon /bin/bash <<'EOF'
 equo rm sys-kernel/sabayon-sources sabayon-live sabayon-artwork-isolinux
-equo cleanup
+equo update && equo upgrade && equo cleanup
 
 cp /etc/systemd/system/autologin@.service \
     /usr/lib/systemd/system/getty@.service
